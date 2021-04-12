@@ -19,7 +19,8 @@ class style():
 def gencode():
 	letters = string.ascii_letters + string.digits
 	return ''.join(random.choice(letters) for i in range(16))
-
+    
+f = open("nitro codes that work.txt", "a+")
 
 class NitroGenerator:
 	def __init__(self):
@@ -35,6 +36,7 @@ class NitroGenerator:
 			data = response.json()
 			if response.status_code == 200:
 				print(style.RED + "Worked: " + code)
+                f.write(f"\ndiscord.gift/{code}")
 			else:
 				print(style.GREEN + "invalid: " + code)
 

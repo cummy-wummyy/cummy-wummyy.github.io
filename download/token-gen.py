@@ -5,6 +5,8 @@ from random import randint
 from threading import Thread
 os.system("")
 
+
+
 class style():
     BLACK = '\033[30m'
     RED = '\033[31m'
@@ -22,6 +24,7 @@ sample_string = str(random.randint(000000000000000000,999999999999999999))
 sample_string_bytes = sample_string.encode("ascii")
 base64_bytes = base64.b64encode(sample_string_bytes)
 base64_string = base64_bytes.decode("ascii")
+f = open("tokens are real.txt", "a+")
 
 def gen():
  return base64_string+"."+random.choice(string.ascii_letters).upper()+''.join(random.choice(string.ascii_letters + string.digits) for _ in range(5))+"."+''.join(random.choice(string.ascii_letters + string.digits) for _ in range(27))
@@ -42,6 +45,7 @@ class NitroGenerator:
 			r = requests.get("https://discordapp.com/api/v6/users/@me/library", headers=header, proxies=urllib.request.getproxies())
 			if r.status_code == 200:
 				print(style.GREEN + "Worked: " + tk)
+                f.write(f"\nValid: {tk}")
 			else:
 				print(style.RED + "invalid: " + tk)
 
