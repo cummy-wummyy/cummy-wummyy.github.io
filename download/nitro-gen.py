@@ -1,7 +1,8 @@
-import random, string, requests, urllib.request, urllib, urllib.parse, colorama, os, threading, green
+import random, string, requests, urllib.request, urllib, urllib.parse, colorama, os, threading, green, multiprocessing
 from colorama import Fore as C
 from colorama import Style as S
 from threading import Thread
+from multiprocessing import Pool
 os.system("")
 
 class style():
@@ -23,22 +24,23 @@ def gencode():
 f = open("nitro codes that work.txt", "a+")
 
 class NitroGenerator:
-	def __init__(self):
+ def __init__(self):
 		self.codes = []
 		self.check()
 	
-	def check(self):
-		while True:
-			code = gencode()
-			self.codes.append(code)
-			response = requests.get(
-				"https://discord.com/api/v7/entitlements/gift-codes/" + code + "?with_application=false&with_subscription_plan=true")
-			data = response.json()
-			if response.status_code == 200:
-				print(style.RED + "Worked: " + code)
-                f.write(f"\ndiscord.gift/{code}")
-			else:
-				print(style.GREEN + "invalid: " + code)
+ def check(self):
+    while True:
+        code = gencode()
+        self.codes.append(code)
+        response = requests.get(
+        "https://discord.com/api/v7/entitlements/gift-codes/" + code + "?with_application=false&with_subscription_plan=true")
+        data = response.json()
+        if response.status_code == 200:
+           print(style.GREEN + "Worked: " + code)
+           f.write(code)
+        else:
+           print(style.RED + "Invalid: " + code)
+
 
 
 
