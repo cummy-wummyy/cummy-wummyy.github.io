@@ -43,7 +43,7 @@ curl -s https://k-storage.com/bootstrapper/files/ScintillaNET.dll --output Scint
 curl -s https://k-storage.com/bootstrapper/files/krnl.dll --output krnl.dll 
 curl -s https://k-storage.com/bootstrapper/files/krnlss.exe --output krnlss.exe
 curl -s https://k-storage.com/bootstrapper/files/krnlss.exe.config --output krnlss.exe.config
-echo 50^% done
+echo almost done
 TIMEOUT 5 /nobreak
 cd bin
 curl -s https://k-storage.com/bootstrapper/files/bin/Bunifu_UI_v1.5.3.dll --output Bunifu_UI_v1.5.3.dll
