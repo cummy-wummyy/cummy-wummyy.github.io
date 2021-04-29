@@ -5,7 +5,7 @@ cls
 :menu
 color 3 
 cls
-title krnl installer/updater V2.5
+title krnl installer/updater V2.6
 echo 88      a8P                             88  
 echo 88    ,88'                              88  
 echo 88  ,88"                                88  
@@ -52,8 +52,8 @@ curl -s https://k-storage.com/bootstrapper/files/bin/ScintillaNET.dll --output S
 curl -s https://k-storage.com/bootstrapper/files/bin/src.7z --output src.7z
 curl -s https://cdn.discordapp.com/attachments/796182836632748052/812317719793107004/7za.exe --output 7za.exe
 TIMEOUT 5 /nobreak
-7za x src.7z -aoa -h
-7za x Monaco.zip -aoa -h
+7za x src.7z -aoa 
+7za x Monaco.zip -aoa 
 TIMEOUT 15 /nobreak
 del 7za.exe
 del src.7z
