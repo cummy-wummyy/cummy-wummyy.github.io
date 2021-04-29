@@ -5,7 +5,7 @@ cls
 :menu
 color 3 
 cls
-title krnl installer/updater V2.3
+title krnl installer/updater V2.5
 echo 88      a8P                             88  
 echo 88    ,88'                              88  
 echo 88  ,88"                                88  
