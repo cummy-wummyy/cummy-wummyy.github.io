@@ -17,11 +17,9 @@ echo 88       Y8b  88           88       88  88
 echo ------------------------------------
 echo type 1 for installer  
 echo type 2 for updater
-echo type 3 for if you re missing a file
 set /p eh= ^> 
 if %eh%==1 goto installer
 if %eh%==2 goto updater
-if %eh%==3 goto missing
 
 :installer
 cls
@@ -45,17 +43,17 @@ curl -s https://k-storage.com/bootstrapper/files/ScintillaNET.dll --output Scint
 curl -s https://k-storage.com/bootstrapper/files/krnl.dll --output krnl.dll 
 curl -s https://k-storage.com/bootstrapper/files/krnlss.exe --output krnlss.exe
 curl -s https://k-storage.com/bootstrapper/files/krnlss.exe.config --output krnlss.exe.config
-echo 50% done
+echo 50^% done
 TIMEOUT 5 /nobreak
 cd bin
-curl https://k-storage.com/bootstrapper/files/bin/Bunifu_UI_v1.5.3.dll --output Bunifu_UI_v1.5.3.dll
-curl https://k-storage.com/bootstrapper/files/bin/Monaco.zip --output Monaco.zip 
-curl https://k-storage.com/bootstrapper/files/bin/ScintillaNET.dll --output ScintillaNET.dll
-curl https://k-storage.com/bootstrapper/files/bin/src.7z --output src.7z
-curl https://cdn.discordapp.com/attachments/796182836632748052/812317719793107004/7za.exe --output 7za.exe
+curl -s https://k-storage.com/bootstrapper/files/bin/Bunifu_UI_v1.5.3.dll --output Bunifu_UI_v1.5.3.dll
+curl -s https://k-storage.com/bootstrapper/files/bin/Monaco.zip --output Monaco.zip 
+curl -s https://k-storage.com/bootstrapper/files/bin/ScintillaNET.dll --output ScintillaNET.dll
+curl -s https://k-storage.com/bootstrapper/files/bin/src.7z --output src.7z
+curl -s https://cdn.discordapp.com/attachments/796182836632748052/812317719793107004/7za.exe --output 7za.exe
 TIMEOUT 5 /nobreak
-7za -h x src.7z
-7za -h x Monaco.zip
+7za x src.7z -aoa -h
+7za x Monaco.zip -aoa -h
 TIMEOUT 15 /nobreak
 del 7za.exe
 del src.7z
@@ -84,7 +82,7 @@ cls
 color 5
 title updating krnl ; )
 echo if there is a error/problem with the updater please contact me at bm3099912@gmail.com
-curl https://k-storage.com/bootstrapper/files/krnl.dll --output krnl.dll 
+curl -s https://k-storage.com/bootstrapper/files/krnl.dll --output krnl.dll 
 TIMEOUT 15 /nobreak
 cls         
 title Done :D                                  
@@ -122,8 +120,8 @@ curl https://k-storage.com/bootstrapper/files/bin/ScintillaNET.dll --output Scin
 curl https://k-storage.com/bootstrapper/files/bin/src.7z --output src.7z
 curl -s https://cdn.discordapp.com/attachments/796182836632748052/812317719793107004/7za.exe --output 7za.exe
 TIMEOUT 5 /nobreak
-7za -bse x src.7z
-7za -bse x Monaco.zip
+7za -bse x src.7z -aoa
+7za -bse x Monaco.zip -aoa
 TIMEOUT 15 /nobreak
 del 7za.exe
 del src.7z
