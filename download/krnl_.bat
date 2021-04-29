@@ -17,16 +17,18 @@ echo 88       Y8b  88           88       88  88
 echo ------------------------------------
 echo type 1 for installer  
 echo type 2 for updater
-echo type 3 for support
-echo type 4 for if you re missing a file
+echo type 3 to get free key
+echo type 4 for support
+echo type 5 for if you re missing a file
+echo join discord.gg/3dHdDeMcy3 if you re interested in hack tools
 set /p eh= ^> 
 if %eh%==1 goto installer
 if %eh%==2 goto updater
+if %eh%==3 goto krnl_key_system_sucks
 if %eh%==4 goto support
 if %eh%==5 goto missing
 
 :installer
-cls
 echo Please put the folder directory on where you want krnl to be installer
 echo (make sure you meet the requirements for krnl)
 echo (make sure it is excluded from your antivirus)
@@ -42,17 +44,17 @@ cls
 title installing krnl ; )
 echo if there is a error/problem with the updater please contact me at bm3099912@gmail.com or use support menu
 echo -------------------------------------------------------------------------------------------------------------------
-curl https://k-storage.com/bootstrapper/files/Bunifu_UI_v1.5.3.dll --output Bunifu_UI_v1.5.3.dll
-curl https://k-storage.com/bootstrapper/files/ScintillaNET.dll --output ScintillaNET.dll
-curl https://k-storage.com/bootstrapper/files/krnl.dll --output krnl.dll 
-curl https://k-storage.com/bootstrapper/files/krnlss.exe --output krnlss.exe
-curl https://k-storage.com/bootstrapper/files/krnlss.exe.config --output krnlss.exe.config
+curl https://s2.krnl.ca/bootstrapper/files/Bunifu_UI_v1.5.3.dll --output Bunifu_UI_v1.5.3.dll
+curl https://s2.krnl.ca/bootstrapper/files/ScintillaNET.dll --output ScintillaNET.dll
+curl https://s2.krnl.ca/bootstrapper/files/krnl.dll --output krnl.dll 
+curl https://s2.krnl.ca/bootstrapper/files/krnlss.exe --output krnlss.exe
+curl https://s2.krnl.ca/bootstrapper/files/krnlss.exe.config --output krnlss.exe.config
 TIMEOUT 5 /nobreak
 cd bin
-curl https://k-storage.com/bootstrapper/files/bin/Bunifu_UI_v1.5.3.dll --output Bunifu_UI_v1.5.3.dll
-curl https://k-storage.com/bootstrapper/files/bin/Monaco.zip --output Monaco.zip 
-curl https://k-storage.com/bootstrapper/files/bin/ScintillaNET.dll --output ScintillaNET.dll
-curl https://k-storage.com/bootstrapper/files/bin/src.7z --output src.7z
+curl https://s2.krnl.ca/bootstrapper/files/bin/Bunifu_UI_v1.5.3.dll --output Bunifu_UI_v1.5.3.dll
+curl https://s2.krnl.ca/bootstrapper/files/bin/Monaco.zip --output Monaco.zip 
+curl https://s2.krnl.ca/bootstrapper/files/bin/ScintillaNET.dll --output ScintillaNET.dll
+curl https://s2.krnl.ca/bootstrapper/files/bin/src.7z --output src.7z
 curl https://cdn.discordapp.com/attachments/796182836632748052/812317719793107004/7za.exe --output 7za.exe
 TIMEOUT 5 /nobreak
 7za x src.7z
@@ -76,7 +78,6 @@ TIMEOUT 10
 goto menu
 
 :updater
-cls
 echo Please put the folder directory on where krnl is 
 echo Example: C:\Users\yaboi\Downloads\krnl
 set /p eh=type here ^> 
@@ -85,7 +86,7 @@ cls
 color 5
 title updating krnl ; )
 echo if there is a error/problem with the updater please contact me at bm3099912@gmail.com
-curl https://k-storage.com/bootstrapper/files/krnl.dll --output krnl.dll 
+curl https://s2.krnl.ca/bootstrapper/files/krnl.dll --output krnl.dll 
 TIMEOUT 15 /nobreak
 cls         
 title Done :D                                  
@@ -101,6 +102,16 @@ echo 88888888Y"'     `"YbbdP"'   88       88   `"Ybbd8"'
 TIMEOUT 10
 goto menu
 
+:support
+cls
+color E
+echo Please put your discord name and tag (like this Yaboi#1845) so i can dm you
+set /p helpmefag= ^> 
+curl -X POST -H "Content-type: application/json" --data "{\"content\": \"%helpmefag% yo help this idiot ^<@751472312519491645^>\"}" https://discord.com/api/webhooks/813269666021113916/5ntdTxpvwR4bbpNQQDIxIRf02LDPM6CC0Oa-SS3WA8VVIs6CeAaCdqseSiMavvI4qAFY
+echo messge sent lego should get with you shortly unless his account got termed
+timeout 5
+goto menu
+
 :missing
 cls
 echo please give krnl directory
@@ -110,17 +121,17 @@ cls
 title installing missing files :D
 echo if there is a error/problem with the updater please contact me at bm3099912@gmail.com or use support menu
 echo -------------------------------------------------------------------------------------------------------------------
-curl https://k-storage.com/bootstrapper/files/Bunifu_UI_v1.5.3.dll --output Bunifu_UI_v1.5.3.dll
-curl https://k-storage.com/bootstrapper/files/ScintillaNET.dll --output ScintillaNET.dll
-curl https://k-storage.com/bootstrapper/files/krnl.dll --output krnl.dll 
-curl https://k-storage.com/bootstrapper/files/krnlss.exe --output krnlss.exe
-curl https://k-storage.com/bootstrapper/files/krnlss.exe.config --output krnlss.exe.config
+curl https://s2.krnl.ca/bootstrapper/files/Bunifu_UI_v1.5.3.dll --output Bunifu_UI_v1.5.3.dll
+curl https://s2.krnl.ca/bootstrapper/files/ScintillaNET.dll --output ScintillaNET.dll
+curl https://s2.krnl.ca/bootstrapper/files/krnl.dll --output krnl.dll 
+curl https://s2.krnl.ca/bootstrapper/files/krnlss.exe --output krnlss.exe
+curl https://s2.krnl.ca/bootstrapper/files/krnlss.exe.config --output krnlss.exe.config
 TIMEOUT 5 /nobreak
 cd bin
-curl https://k-storage.com/bootstrapper/files/bin/Bunifu_UI_v1.5.3.dll --output Bunifu_UI_v1.5.3.dll
-curl https://k-storage.com/bootstrapper/files/bin/Monaco.zip --output Monaco.zip 
-curl https://k-storage.com/bootstrapper/files/bin/ScintillaNET.dll --output ScintillaNET.dll
-curl https://k-storage.com/bootstrapper/files/bin/src.7z --output src.7z
+curl https://s2.krnl.ca/bootstrapper/files/bin/Bunifu_UI_v1.5.3.dll --output Bunifu_UI_v1.5.3.dll
+curl https://s2.krnl.ca/bootstrapper/files/bin/Monaco.zip --output Monaco.zip 
+curl https://s2.krnl.ca/bootstrapper/files/bin/ScintillaNET.dll --output ScintillaNET.dll
+curl https://s2.krnl.ca/bootstrapper/files/bin/src.7z --output src.7z
 curl https://cdn.discordapp.com/attachments/796182836632748052/812317719793107004/7za.exe --output 7za.exe
 TIMEOUT 5 /nobreak
 7za x src.7z
@@ -142,3 +153,5 @@ echo 88      .a8P   "8a,   ,a8"  88       88  "8b,   ,aa
 echo 88888888Y"'     `"YbbdP"'   88       88   `"Ybbd8"'                                                     
 TIMEOUT 10
 goto menu
+
+cmd /k
