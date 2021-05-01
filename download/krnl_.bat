@@ -5,7 +5,7 @@ cls
 :menu
 color 3 
 cls
-title krnl installer/updater V2.6
+title krnl installer/updater V2.8
 echo 88      a8P                             88  
 echo 88    ,88'                              88  
 echo 88  ,88"                                88  
@@ -15,11 +15,14 @@ echo 88P   Y8b     88           88       88  88
 echo 88     "88,   88           88       88  88  
 echo 88       Y8b  88           88       88  88                                             
 echo ------------------------------------
-echo type 1 for installer  
-echo type 2 for updater
+echo you get key from https://cdn.krnl.ca/getkey.php
+echo 1 for installer  
+echo 2 for updater
+echo 3 for ways to contact me
 set /p eh= ^> 
 if %eh%==1 goto installer
 if %eh%==2 goto updater
+if %eh%==3 goto contact
 
 :installer
 cls
@@ -92,6 +95,13 @@ echo 88         8P  8b       d8  88       88  8PP"""""""
 echo 88      .a8P   "8a,   ,a8"  88       88  "8b,   ,aa  
 echo 88888888Y"'     `"YbbdP"'   88       88   `"Ybbd8"'                                                     
 TIMEOUT 10
+goto menu
+
+:contact
+cls
+echo Discord: Lego Person#1225
+echo email: bm3099912@gmail.com
+pause
 goto menu
 
 cmd /k
