@@ -5,7 +5,7 @@ cls
 :menu
 color 3 
 cls
-title krnl installer/updater V2.8
+title krnl installer/updater V2.9
 echo 88      a8P                             88  
 echo 88    ,88'                              88  
 echo 88  ,88"                                88  
@@ -19,10 +19,12 @@ echo you get key from https://cdn.krnl.ca/getkey.php
 echo 1 for installer  
 echo 2 for updater
 echo 3 for ways to contact me
+echo 4 for credits
 set /p eh= ^> 
 if %eh%==1 goto installer
 if %eh%==2 goto updater
 if %eh%==3 goto contact
+if %eh%==4 goto credit
 
 :installer
 cls
@@ -103,5 +105,13 @@ echo Discord: Lego Person#1225
 echo email: bm3099912@gmail.com
 pause
 goto menu
+
+:credit
+cls
+echo 99% Lego making almost everything
+echo 1% krnl for uploading files
+pause
+goto menu
+
 
 cmd /k
