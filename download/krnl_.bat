@@ -19,12 +19,15 @@ echo you get key from https://cdn.krnl.ca/getkey.php
 echo 1 for installer  
 echo 2 for updater
 echo 3 for ways to contact me
-echo 4 for credits
+echo 4 troubleshoot krnl
+echo 5 for credits
 set /p eh= ^> 
 if %eh%==1 goto installer
 if %eh%==2 goto updater
 if %eh%==3 goto contact
-if %eh%==4 goto credit
+if %eh%==4 troubleshoot
+if %eh%==5 goto credit
+else goto menu
 
 :installer
 cls
@@ -98,6 +101,8 @@ echo 88      .a8P   "8a,   ,a8"  88       88  "8b,   ,aa
 echo 88888888Y"'     `"YbbdP"'   88       88   `"Ybbd8"'                                                     
 TIMEOUT 10
 goto menu
+
+:troubleshot
 
 :contact
 cls
